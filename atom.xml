@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://funwentao.github.io/"/>
-  <updated>2018-12-12T03:06:20.323Z</updated>
+  <updated>2018-12-12T03:52:49.572Z</updated>
   <id>https://funwentao.github.io/</id>
   
   <author>
@@ -21,9 +21,16 @@
     <link href="https://funwentao.github.io/2018/12/12/sql/"/>
     <id>https://funwentao.github.io/2018/12/12/sql/</id>
     <published>2018-12-12T03:06:20.000Z</published>
-    <updated>2018-12-12T03:06:20.323Z</updated>
+    <updated>2018-12-12T03:52:49.572Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="最近看SQL必知必会，记录下笔记"><a href="#最近看SQL必知必会，记录下笔记" class="headerlink" title="最近看SQL必知必会，记录下笔记"></a>最近看SQL必知必会，记录下笔记</h2><h3 id="结束sql语句"><a href="#结束sql语句" class="headerlink" title="结束sql语句"></a>结束sql语句</h3><blockquote><p>多条sql语句必须以分号分割。多数dbms不需要再单挑sql语句后加分号</p></blockquote><h3 id="sql和大小写"><a href="#sql和大小写" class="headerlink" title="sql和大小写"></a>sql和大小写</h3><blockquote><p>sql语句不区分大小写，对sql关键字使用大写，对列名和表名使用小写</p></blockquote><h3 id="使用空格"><a href="#使用空格" class="headerlink" title="使用空格"></a>使用空格</h3><blockquote><p>所有的空格都被忽略，可以写成一行或者多行</p></blockquote><h3 id="检索不同的值"><a href="#检索不同的值" class="headerlink" title="检索不同的值"></a>检索不同的值</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> vend_id <span class="keyword">FROM</span> Products;</span><br></pre></td></tr></table></figure><blockquote><p>DISTINCT关键字作用于所有的列，不仅仅是跟在其后的那一列。除非多列完全相同，否则所有的行都会被检索出来。</p></blockquote><h3 id="限制结果"><a href="#限制结果" class="headerlink" title="限制结果"></a>限制结果</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- SQL Servser Access中使用TOP关键字来限制最多返回多少行</span></span><br><span class="line"><span class="keyword">SELECT</span> TOP <span class="number">5</span> prod_name <span class="keyword">FROM</span> Products;</span><br><span class="line"><span class="comment">-- DB2</span></span><br><span class="line"><span class="keyword">SELECT</span> prod_name <span class="keyword">FROM</span> Products <span class="keyword">FETCH</span> <span class="keyword">FIRST</span> <span class="number">5</span> <span class="keyword">ROWS</span> <span class="keyword">ONLY</span>;</span><br><span class="line"><span class="comment">--Oracle</span></span><br><span class="line"><span class="keyword">SELECT</span> prod_name <span class="keyword">FROM</span> Products <span class="keyword">WHERE</span> <span class="keyword">ROWNUM</span> &lt;= <span class="number">5</span>;</span><br><span class="line"><span class="comment">-- MySQL MariaDB PostgreSQL SQLite</span></span><br><span class="line"><span class="keyword">SELECT</span> prod_name <span class="keyword">FROM</span> Products <span class="keyword">LIMIT</span> <span class="number">5</span>;</span><br></pre></td></tr></table></figure><h3 id="偏移"><a href="#偏移" class="headerlink" title="偏移"></a>偏移</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--会检索第2行，而不是第1行</span></span><br><span class="line">LIMIT 1 OFFSET 1</span><br><span class="line"><span class="comment">--MySQL和MariaDB支持简化版的LIMIT，即LIMIT 3，4</span></span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;最近看SQL必知必会，记录下笔记&quot;&gt;&lt;a href=&quot;#最近看SQL必知必会，记录下笔记&quot; class=&quot;headerlink&quot; title=&quot;最近看SQL必知必会，记录下笔记&quot;&gt;&lt;/a&gt;最近看SQL必知必会，记录下笔记&lt;/h2&gt;&lt;h3 id=&quot;结束sql语句&quot;&gt;
+      
     
     </summary>
     
